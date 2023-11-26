@@ -60,7 +60,7 @@ undefined         =>             undefined
 array             =>             object
 object            =>             object
 function          =>             function/object function
-
+date              =>              object
 */
 
 //*******************stack and heep memory*********************
