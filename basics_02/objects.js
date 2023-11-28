@@ -114,3 +114,33 @@ const user =[
 // console.log(instaUser.hasOwnProperty('mailId')); // checks wather the property is avail or not.
 
 
+const newUser ={
+    name:"preeti",
+    age : 20,
+    courseInstructor : "youtube"
+}
+
+// console.log(newUser.courseInstructor);
+
+//destructuring the object
+const {courseInstructor : instrct} = newUser
+console.log(instrct)
+
+// JSON format
+
+{
+
+    "name" : "preeti",
+    "age" : 20,
+    "courseName" : "javascript",
+    "isLoggedIn" : false
+
+}
+
+//it can be on array formate too
+
+[
+    {},
+    {},
+    {}
+]
