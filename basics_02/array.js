@@ -37,7 +37,7 @@ const anotherHeros = ["shaktiman", "krishh", "chhotabhim"];
 
 // heros.push(anotherHeros)
 // console.log(heros);
-// console.log(heros[4][2])
+// console.log(heros[4][2]);
 // console.log(heros.concat(anotherHeros))
 
 // // spread method 

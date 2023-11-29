@@ -31,8 +31,9 @@ const anotherName = "   ramkumar  ";
 
 let url = "https://preetipal/@preeti%20pal"
 // console.log(url.replace("preeti", "priya"))
-// console.log(url.replaceAll('preeti','priya'))  
 // this will also replace the first value found and not the all value
+// console.log(url.replaceAll('preeti','priya'))  
+
 
 // console.log(url.replace('%20', '-'))
 
