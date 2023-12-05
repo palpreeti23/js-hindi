@@ -6,6 +6,10 @@ myArray.forEach( function(value) {
 
 })
 
+// we cant store forEach loop in any other variable. it gives undefined 
+const newArray = myArray.forEach( (value) => { return(value*10)})
+console.log(newArray)
+
 myArray.forEach( (item)=>{
     // console.log(item);
 })
@@ -36,7 +40,7 @@ const language = [
 ]
 
 language.forEach( (key) => {
-    console.log(key.shortName);
+    // console.log(key.shortName);
 })
 
 
