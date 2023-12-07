@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+
+const div = document.createElement('div')
+console.log(div)
+div.className ='first-div'
+div.id = 'title'
+div.setAttribute('type','text')
+div.style.backgroundColor = 'green'
+div.style.padding = "10px"
+// div.innerHTML = "my first div"
+const text = document.createTextNode("this is my first div")
+div.appendChild(text)
+document.body.appendChild(div)
+
+
+const h1 = document.createElement('h1')
+console.log(h1)
+h1.setAttribute('id','main-heading');
+h1.style.color= "green"
+const code = document.createTextNode("this is the biggest heading")
+h1.appendChild(code)
+document.body.appendChild(h1)
+
+
+
+</script>
+</html>
