@@ -92,3 +92,97 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+
+```javascript
+
+const guesses = document.querySelector('#guessField');
+const submit = document.querySelector('#subt');
+const prevGuess = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('resultParas');
+
+let number = parseInt(Math.random() * 100 + 1);
+
+const p = document.createElement('p');
+const guessArray = [];
+const playGame = true;
+let numOfGuess = 1;
+
+if (playGame) {
+  submit.addEventListener('click', function (e) {
+    e.preventDefault();
+    let guess = parseInt(guesses.value);
+    validate(guess);
+  });
+}
+
+function validate(guess) {
+  if (isNaN(guess)) {
+    alert(`enter a valid number`);
+  } else if (guess < 1) {
+    alert(`enter a number greater than 1`);
+  } else if (guess > 100) {
+    alert(`enter a number smaller than 100`);
+  } else {
+    guessArray.push(guess);
+    if (numOfGuess === 11) {
+      displayGuess(guess);
+      displayMsg(`game over. the random number is ${number}`);
+
+      endGame();
+    } else {
+      displayGuess(guess);
+      checkGuess(guess);
+    }
+  }
+}
+
+function checkGuess(guess) {
+  if (guess === number) {
+    displayMsg(`you got the number`);
+    endGame();
+  } else if (guess < number) {
+    displayMsg(`number is tooo low`);
+  } else if (guess > number) {
+    displayMsg(`number is tooo high`);
+  }
+}
+
+function displayGuess(guess) {
+  guesses.value = '';
+  prevGuess.innerHTML += `${guess},`;
+  numOfGuess++;
+  remaining.innerHTML = `${11 - numOfGuess}`;
+}
+
+function displayMsg(msg) {
+  lowOrHi.innerHTML = <h2>${msg}</h2>;
+}
+
+function endGame() {
+  guesses.value = '';
+  guesses.setAttribute('disabled', '');
+  p.classList.add('button');
+  p.innerHTML = `<h2 id='newbtn'>new game</h2>`;
+  startOver.appendChild(p);
+  playGame = false;
+  newGame();
+}
+
+function newGame() {
+  const newbtnButton = document.querySelector("#newbtn")
+  newbtnButton.addEventListener('click',function(){
+     number = parseInt(Math.random() * 100 + 1);
+    guessArray = [];
+    numOfGuess = 1;
+    prevGuess.innerHTML = ``;
+    remaining.innerHTML = `${11 - numOfGuess}`;
+    guesses.removeAttribute('disabled');
+    startOver.removeChild(p);
+     playGame = true;
+  })
+ 
+}
+
+```
