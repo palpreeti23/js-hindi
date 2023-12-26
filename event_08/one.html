@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT IN JS</title>
+</head>
+<body>
+    
+    <h2>Amazing image</h2>
+    <div style="background-color: black;">
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div> 
+</body>
+<script>
+
+//onclick function dont give much features so we use event listeners than onclick.
+    // document.getElementById('japan').onclick = function(){
+    //     alert("japan image has been clicked")
+    // }
+
+
+//******************************** ALSO STUDY ABOUT ***********************
+// type, timestamp, defaultprevent, target, toElement, srcElement, currentTarget, 
+// clientX, clientY, screenX, screenY
+//altKey, ctrlKey, shiftKey, keyCode
+
+
+// event propogation are of two type
+// 1 =>event bubbling    2=>event capturing
+
+// bubbling => it goes from bottom to top like inside element then outside => child then parents. for bublling make third parameter false
+ // there is three parameters in it . bydefault its false so we don't need to write that
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log('ul has been clicked')
+    // },false)
+
+    // document.getElementById('japan').addEventListener('click',function(e){
+    //     // console.log(e)
+    //     e.stopPropagation();
+    //     //element bubble ho kr upr k element m nai jaega . japan clicked tak rahega.
+    //     console.log('japan clicked')
+    // },false)
+
+// capturing =? it goes top to bottom like parent then child. for capturing make third parameter true
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log('ul has been clicked')
+    // },true)
+
+    // document.getElementById('japan').addEventListener('click',function(e){
+    //     // console.log(e)
+    //     console.log('japan clicked')
+    // },true)
+
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     // console.log(e);
+//     e.preventDefault();
+//     console.log('google clicked ');
+
+// }, false)
+
+document.getElementById('images').addEventListener('click', function(e){
+    // console.log(e.target.id)
+    // console.log(e.target.tagName)
+   
+    if (e.target.tagName === 'IMG') {
+        console.log(e.target.id)
+        const targetedId = e.target.parentNode;
+        targetedId.remove();
+    }
+    // targetedId.remove();
+    // targetedId.parentNode.removeChild(targetedId);
+
+}, false)
+
+
+</script>
+
+</html>

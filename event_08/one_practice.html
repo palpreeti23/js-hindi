@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>different events in JS</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        #btn{
+            background-color: red;
+            color: black;
+          
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus, aliquid nihil recusandae quis quo sint? Vel doloremque non modi illo hic ex? Animi perspiciatis delectus, quo id corporis neque error mollitia accusantium est suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus, aliquid nihil recusandae quis quo sint? Vel doloremque non modi illo hic ex? Animi perspiciatis delectus, quo id corporis neque error mollitia accusantium est suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus, aliquid nihil recusandae quis quo sint? Vel doloremque non modi illo hic ex? Animi perspiciatis delectus, quo id corporis neque error mollitia accusantium est suscipit</p>
+        <button id="btn" >show details</button>
+    </div>
+    
+</body>
+<script>
+
+    //   let para = document.getElementById('para')
+    //   para.addEventListener('mouseover',function(){
+    //     console.log("mouse is inside the paragraph");
+    //   })
+    //   let para = document.getElementById('para')
+    //   para.addEventListener('mouseout',function(){
+    //     console.log("mouse is outside the paragraph");
+    //   })
+
+    
+        let btn = document.getElementById('btn').addEventListener('click',function hide(){
+            let para = document.getElementById('para');
+        if(para.style.display != 'none'){
+            para.style.display = 'none'
+        }else{
+            para.style.display= 'block'
+        }
+        
+        })
+        
+
+</script>
+</html>
