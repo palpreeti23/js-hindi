@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>different events in JS</title>
-    <style>
+    <!-- <style>
         body{
             background-color: black;
             color: white;
@@ -14,14 +14,39 @@
             color: black;
           
         }
+    </style> -->
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .box{
+
+            border-style: solid ;
+            border-width: 8px;
+            height: 30px;
+            width: 5%;
+            text-align: center;
+            padding: 3rem;
+            float: left;
+           background-color: white;
+        }
+       
     </style>
 </head>
 <body>
-    <div>
+    <!-- <div>
         <h1>heading</h1>
         <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus, aliquid nihil recusandae quis quo sint? Vel doloremque non modi illo hic ex? Animi perspiciatis delectus, quo id corporis neque error mollitia accusantium est suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus, aliquid nihil recusandae quis quo sint? Vel doloremque non modi illo hic ex? Animi perspiciatis delectus, quo id corporis neque error mollitia accusantium est suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus, aliquid nihil recusandae quis quo sint? Vel doloremque non modi illo hic ex? Animi perspiciatis delectus, quo id corporis neque error mollitia accusantium est suscipit</p>
         <button id="btn" >show details</button>
-    </div>
+
+    </div> -->
+    
+    <div class="box" id="box1">box-1</div>
+    <div class="box" id="box2">box-2</div>
+    <div class="box" id="box3">box-3</div>
+    <div class="box" id="box4">box-4</div>
+    <input type="text" id="inputField">
     
 </body>
 <script>
@@ -35,17 +60,42 @@
     //     console.log("mouse is outside the paragraph");
     //   })
 
-    
-        let btn = document.getElementById('btn').addEventListener('click',function hide(){
-            let para = document.getElementById('para');
-        if(para.style.display != 'none'){
-            para.style.display = 'none'
-        }else{
-            para.style.display= 'block'
-        }
+
+        // let btn = document.getElementById('btn').addEventListener('click',function hide(){
+        //     let para = document.getElementById('para');
+        // if(para.style.display != 'none'){
+        //     para.style.display = 'none'
+        // }else{
+        //     para.style.display= 'block'
+        // }
         
+        // })
+        
+        document.getElementById('box1').addEventListener('click', function(){
+            console.log("i'm clicked")
         })
-        
+
+        document.getElementById('box2').addEventListener('mouseover', function(){
+            console.log("curser is inside the box")
+        })
+
+        document.getElementById('box2').addEventListener('mouseout', function(){
+            console.log("curser is outside the box")
+        })
+
+        document.getElementById('inputField').addEventListener('keypress', function(){
+            console.log("key has been pressed")
+        })
+
+        document.getElementById('inputField').addEventListener('keydown', function(){
+            console.log("key has been down")
+        })
+
+        document.getElementById('inputField').addEventListener('keyup', function(){
+            console.log("key has been up")
+        })
+
+
 
 </script>
 </html>
