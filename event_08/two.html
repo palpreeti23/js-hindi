@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="header">javascript in yt</h2>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    // setInterval(function(){
+    //     console.log("preeti")
+    // },1000)
+
+const nameChange = setTimeout(function(){
+    console.log("preeti")
+    document.getElementById("header").innerHTML = "preeti pal"
+},2000)
+
+document.getElementById("stop").addEventListener('click',function(){
+
+    console.log('clicked')
+    clearTimeout(nameChange)
+},2000)
+
+
+
+</script>
+</html>

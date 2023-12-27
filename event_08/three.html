@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>javascript events in yt</h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+let changeMe;
+document.getElementById("start").addEventListener('click',function(){
+     changeMe = setInterval(function(){
+        console.log("preeti",Date.now());
+    },2000)
+})
+  
+document.getElementById("stop").addEventListener('click',function(){
+    clearInterval(changeMe)
+    console.log("clear clicked")
+})
+
+
+
+
+</script>
+</html>
