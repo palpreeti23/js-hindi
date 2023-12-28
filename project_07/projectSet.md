@@ -93,6 +93,30 @@ form.addEventListener('submit', function (e) {
 
 ```
 
+### project 3
+```javascript
+const clock = document.getElementById("clock")
+
+// setInterval( function(){
+//  const date = new Date();
+//   clock.innerHTML = date.toLocaleTimeString()
+//   },1000)
+
+const time = function(){
+  setInterval(timeChange,1000)
+
+}
+  const timeChange = function(){
+
+    const date = new Date();
+    clock.innerHTML = date.toLocaleTimeString()
+  }
+
+  clock.addEventListener('click',time)
+
+```
+
+### project 4
 ```javascript
 
 const guesses = document.querySelector('#guessField');
@@ -185,4 +209,67 @@ function newGame() {
  
 }
 
+```
+
+
+### project 5
+```javascript
+const insert = document.getElementById('insert');
+window.addEventListener('keydown', function (e) {
+  insert.innerHTML = `
+  
+  <div id="key">
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key == ' ' ? 'space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  </div>
+  
+  `;
+});
+
+
+```
+
+
+### project 6
+```javascript
+const start = document.querySelector("#start")
+const stop = document.querySelector("#stop")
+
+const randomColor = function(){
+
+  const hex = '0123456789ABCDEF';
+  let color = "#";
+  for(let i = 0; i<6; i++){
+    color += hex[Math.floor(Math.random()*16)];
+  }
+  return color;
+}
+let colorId ;
+const startChangeColor = function(){
+  if(!colorId){
+    colorId = setInterval(changeColor,1000);
+  }
+}
+
+function changeColor(){
+  document.body.style.backgroundColor = randomColor();
+}
+
+const stopChangeColor = function(){
+  clearInterval(colorId);
+  colorId = null;
+}
+
+start.addEventListener('click',startChangeColor)
+stop.addEventListener('click',stopChangeColor)
 ```
