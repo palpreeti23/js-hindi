@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">clickme</button>
+    
+</body>
+<script>
+
+    document.getElementById('btn').addEventListener('click',function(){
+        document.body.style.backgroundImage = 'https://avatars.githubusercontent.com/u/11613311?v=4' 
+    })
+
+    let data;
+
+    let myUrl = 'https://api.github.com/users/hiteshchoudhary'
+const xhr = new XMLHttpRequest()
+xhr.open('GET',myUrl);
+xhr.onreadystatechange = function(){
+    console.log(xhr.readyState)
+    if(xhr.readyState ===4){
+         data = JSON.parse(this.responseText);
+        console.log(data.public_repos)
+        console.log(data.followers)
+        console.log(data.avatar_url)
+
+        console.log(data)
+
+    }
+}
+
+xhr.send()
+</script>
+</html>
