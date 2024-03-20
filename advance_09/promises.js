@@ -112,8 +112,12 @@
  
 
  fetch("https://jsonplaceholder.typicode.com/users")
-.then((data)=>{
-console.log(data)
+// .then((data)=>{
+// return data.json();
+// })
+.then((response) => {
+    console.log(response);
+
 }).catch((error)=>{
     console.log(error)
 })
