@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+</head>
+<body>
+    <button>clicked</button>
+</body>
+<script>
+
+    class react{
+        constructor(){
+            this.data = "react";
+            this.server = "https://localhost/300"
+
+            //requirements
+            //this.clickhandle here this is the reference of button
+            // bind(this) gives the reference of the variables present in constructor
+
+            document
+                    .querySelector('button')
+                    .addEventListener('click',this.clickHandle.bind(this))
+
+
+        }
+
+        clickHandle(){
+            console.log("clickedddd")
+            console.log(this.server)
+        }
+    }
+
+    //it creates an object here
+    const chai = new react()
+
+</script>
+</html>
