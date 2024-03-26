@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+    <style>
+        body{
+            background-color: #131313;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="green">green</button>
+    <button id="red">red</button>
+    
+</body>
+<script>
+    // LEXICAL SCOPING :- Lexical scoping defines a function's accessible scope
+    
+
+    function parent(){
+        const name = "preeti pal";
+
+        function child(){
+            console.log(name);
+        }
+        child();
+    }
+    parent();
+
+
+
+    // CLOSURE :- closure enables a function to access variables even after its scope closes.
+    // it return all the lexical scope along with the function. if the function has its outer function it will return the whole function.
+
+    function user(){
+        const userame = "javascript";
+
+        function anotheruser(){
+            console.log(userame)
+        }
+        return anotheruser;
+    }
+
+    let user2 = user();
+    user2();
+
+
+</script>
+
+<script>
+
+    // document.getElementById('red').onclick = function(){
+    //     document.body.style.backgroundColor = 'red'
+    // }
+
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }
+
+    function changeColor (color){
+
+        function realColor(){
+             document.body.style.backgroundColor = color;
+        }
+
+        return realColor;
+    }
+
+document.getElementById('red').addEventListener('click',changeColor('red'));
+document.getElementById('green').addEventListener('click',changeColor('green'))
+
+
+
+
+</script>
+</html>
