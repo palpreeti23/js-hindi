@@ -1,11 +1,15 @@
+
+//map() creates a new array from calling a function for every array element.
+
 const myArray = [1,2,3,4,5,6,7,8,9,10];
-// newArray = myArray.map( (item)=> item*10)
-// console.log(newArray);
-// myArray.forEach( (item)=> )
+
+let newArray = myArray.map( (item)=> item)
+console.log(newArray);
+// myArray.forEach( (item)=>{} )
 
 
 // Take an array of numbers and make them strings
-const newArray = myArray.map( (item )=> item.toString())
+// const newArray = myArray.map( (item )=> item.toString())
 // console.log(newArray);
 
 const newArr = myArray
@@ -18,14 +22,16 @@ const newArr = myArray
 // Capitalize each of an array of names
 const arr = ["preeti","pri","neha","sakshi","ramkumar","rajbaipal","aniruddha"];
 
-  const newArr2 = arr.map( (item) => {
 
-   const firstAlphabet =  item.charAt(0).toUpperCase();
-   const rest = item.slice(1).toLowerCase();
-   return firstAlphabet+rest;
 
-  }
-  )
+//   const newArr2 = arr.map( (item) => {
+
+//    const firstAlphabet =  item.charAt(0).toUpperCase();
+//    const rest = item.slice(1).toLowerCase();
+//    return firstAlphabet+rest;
+
+//   }
+//   )
 //   console.log(newArr2)
 
   const myArray2 = [{
@@ -49,6 +55,7 @@ const arr = ["preeti","pri","neha","sakshi","ramkumar","rajbaipal","aniruddha"];
     age: 100
 }
 ];
+
 
 // Make an array of strings of the names
 
