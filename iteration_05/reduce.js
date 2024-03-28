@@ -25,6 +25,8 @@ const shoppingCart = [
     },
 ]
 
+
+
 const sumPrice = shoppingCart.reduce( ( sum,item)=> sum + item.price ,0 )
 // console.log(sumPrice);
 
