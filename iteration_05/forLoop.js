@@ -9,8 +9,8 @@
 //     }
 // }
 
-// let myArr = ["jyoti","preeti","priya","neha"];
-// console.log(myArr.length);
+let myArr = ["jyoti","preeti","priya","neha"];
+console.log(myArr.length);
 
 // for (let i = 0; i < myArr.length; i++) {
 //     const element = myArr[i];
@@ -30,13 +30,12 @@
 
 
 
-for (let i = 0; i <= 10; i++) {
+// for (let i = 0; i <= 10; i++) {
   
-    if(i == 5){
-        console.log("5 detected");
-        continue;
-    }
-    console.log(`value of i is ${i}`);
-}
-
+//     if(i == 5){
+//         console.log("5 detected");
+//         continue;
+//     }
+//     console.log(`value of i is ${i}`);
+// }
 

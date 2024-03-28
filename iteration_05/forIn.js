@@ -1,4 +1,5 @@
 // for in loop 
+// better for arrays .....
 
 const myObj = {
     name:"preeti",
@@ -11,11 +12,13 @@ for (const key in myObj) {
     // console.log(`${key} is the value of ${myObj[key]}`);
 }
 
+
 const language = ["java","python","cpp","ruby"];
 
 for (const key in language) {
     
         // console.log(language[key]);
+        // console.log(key)
     
 }
 
@@ -26,6 +29,7 @@ map.set('IN',"india");
 map.set('USA',"united states of amerika");
 map.set('FR',"france");
 
-for (const key in map) {
+for (const [key, value] in map) {
+   console.log(key, value)
    console.log(key)
 }
