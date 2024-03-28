@@ -1,11 +1,10 @@
 
 const myArray = [2,4,6,8,9];
 
-// myArray.forEach( function(value) {
-//     // console.log(value);
+myArray.forEach( function(value) {
+    // console.log(value);
 
-// })
-
+})
 
 // we cant store forEach loop in any other variable. it gives undefined 
 const newArray = myArray.forEach( (value) => { return(value*10)})
@@ -62,11 +61,11 @@ let myObj = {
 //     console.log(myObj[key])
 // })
 
-let arr = [1,2,3,4,5,9]
+// let arr = [1,2,3,4,5,9]
 
-arr.forEach( function(value){
-    console.log(value);
-})
+// arr.forEach( function(value){
+//     console.log(value);
+// })
 
 const obj = {
     fname:'preeti',
@@ -78,14 +77,14 @@ const obj = {
 // Object.keys gives you an array of the keys in that object.
 // where as Object.entries returns an array of arrays containing key value pair.
 
-Object.keys(obj).forEach( function(value){
-    console.log(`${value} : ${obj[value]}`);
-    // console.log(obj[value])
-})
+// Object.keys(obj).forEach( function(value){
+//     console.log(`${value} : ${obj[value]}`);
+//     // console.log(obj[value])
+// })
 
-Object.entries(obj).forEach( function(value){
-    // console.log(`${value} : ${obj[value]}`);
-    console.log(value)
-})
+// Object.entries(obj).forEach( function(value){
+//     // console.log(`${value} : ${obj[value]}`);
+//     console.log(value)
+// })
 
 
