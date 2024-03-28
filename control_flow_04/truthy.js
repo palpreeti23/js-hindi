@@ -24,6 +24,8 @@ if((Object.keys(myObj)).length === 0){
 
 // nullish coalescing operator (??) : null, undefined
 
+//it returns its left hand side value mostly and if the left hand side's value is null or undefined then it will return its right hand side value
+
  let val1 ;
 //  val1 = 10 ?? 20
 // val1 = null ?? 20
